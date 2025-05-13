@@ -55,7 +55,6 @@ const Menu = () => {
         <>
             <div style={{
                 position: "fixed",
-                border: "1px solid orange",
                 width: "100%"
             }}>
                 <Outlet />
