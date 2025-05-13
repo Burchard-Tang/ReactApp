@@ -27,14 +27,14 @@ const Menu = () => {
 
     const MenuLinkItem = (props) => {
         let bgOpac = "rgba(0,0,0,0)";
-        if (GetCurPage() == props.path) bgOpac ="rgba(0, 0, 0, 0.2)" ;
+        if (GetCurPage() == props.path) bgOpac = "rgba(0, 0, 0, 0.2)";
 
         return (
             <div style={{
                 width: "100%",
                 padding: "5px",
                 backgroundColor: bgOpac
-                }}>
+            }}>
 
                 <MenuLink path={props.path} inner={props.inner} />
             </div>)
@@ -53,6 +53,13 @@ const Menu = () => {
 
     return (
         <>
+            <div style={{
+                position: "fixed",
+                border: "1px solid orange",
+                width: "100%"
+            }}>
+                <Outlet />
+            </div>
             <button onClick={Click}
                 style={{
                     position: "fixed",
@@ -87,13 +94,6 @@ const Menu = () => {
                     <li><MenuLinkItem path="/myprofile" inner="My Profile" /></li>
                 </ul>
             </nav>
-
-            <div style={{
-                position: "fixed"
-            }}>
-
-            </div>
-            <Outlet />
         </>
     );
 }
