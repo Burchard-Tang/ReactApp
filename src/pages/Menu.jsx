@@ -1,10 +1,15 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 const Menu = () => {
     const buttonSize = 50;
     const buttonOffset = 10;
     const transTime = "1s";
+
+    const GetCurPage = () => {
+        const location = useLocation();
+        return location.pathname;
+    }
 
     let menuOpen = false;
 
@@ -19,6 +24,32 @@ const Menu = () => {
 
         menuOpen = !menuOpen;
     }
+
+    const MenuLinkItem = (props) => {
+        let bgOpac = "rgba(0,0,0,0)";
+        if (GetCurPage() == props.path) bgOpac ="rgba(0, 0, 0, 0.2)" ;
+
+        return (
+            <div style={{
+                width: "100%",
+                padding: "5px",
+                backgroundColor: bgOpac
+                }}>
+
+                <MenuLink path={props.path} inner={props.inner} />
+            </div>)
+    }
+
+    const MenuLink = (props) => {
+        const [color, setColor] = useState("black");
+
+        return (<Link to={props.path} onMouseEnter={() => setColor("white")} onMouseLeave={() => setColor("black")}
+            style={{
+                color: color,
+                fontSize: 20,
+                textDecoration: "none"
+            }}> {props.inner}</Link>)
+    };
 
     return (
         <>
@@ -44,12 +75,16 @@ const Menu = () => {
                 height: "100%",
                 backgroundColor: "lightblue",
                 overflowX: "hidden",
-                transition: transTime
+                transition: transTime,
+
+                color: "black",
             }}>
-                <Link to="/settings">Gear</Link>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/myprofile">My Profile</Link></li>
+                <MenuLinkItem path="/settings" inner="Gear" />
+                <ul class="menuLinks" style={{
+                    listStyleType: "none"
+                }}>
+                    <li><MenuLinkItem path="/" inner="Home" /></li>
+                    <li><MenuLinkItem path="/myprofile" inner="My Profile" /></li>
                 </ul>
             </nav>
 
