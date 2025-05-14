@@ -6,7 +6,7 @@ const Login = () => {
         <>
             <h1>Login</h1>
             <div><Link to="/createaccount">createaccount</Link></div>
-            <Link to="/home">home</Link>
+            <Link to="/myprofile">home</Link>
         </>
     );
 }

@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import MyProfile from "./pages/MyProfile";
 import Gambling from "./pages/Gambling";
 import NoPage from "./pages/NoPage";
+import Collection from "./pages/Collection";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="myprofile" element={<MyProfile />} />
           <Route path="gambling" element={<Gambling />} />
           <Route path="nopage" element={<NoPage />} />
+          <Route path="collection" element={<Collection />} />
         </Route>
       </Routes>
     </BrowserRouter >

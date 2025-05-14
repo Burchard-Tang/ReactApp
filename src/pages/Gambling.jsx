@@ -1,7 +1,7 @@
 const Gambling = () =>
 (
     <>
-        <h1>Gambling</h1>
+        <h1 class="pageTitle">Gambling</h1>
     </>
 )
 
