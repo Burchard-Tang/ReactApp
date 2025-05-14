@@ -47,8 +47,36 @@ a{
 .pageTitle{
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
 }
+
+.pageText{
+    padding: 30px 160px;
+}
+
+.alignedText{
+    display: inline-block;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alignImages{
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  gap: 150px; 
+}
+
+.lootImages{
+    width: 300px;
+    height: 300px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+}
+
 
 
 
