@@ -1,9 +1,8 @@
-const UserHome = () =>
+const Gambling = () =>
 (
     <>
-        <h1>User Home</h1>
-        <h1 style={{textAlign: "center"}}>Hello</h1>
+        <h1>Gambling</h1>
     </>
 )
 
-export default UserHome;
+export default Gambling;

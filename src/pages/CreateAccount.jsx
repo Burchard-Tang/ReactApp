@@ -1,10 +1,14 @@
-const Settings = () => {
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
+const CreateAccount = () => {
     return (
         <>
-            <h1>Settings</h1>
+            <h1>CreateAccount</h1>
+            <Link to="/home">home</Link>
         </>
     );
 }
 
 
-export default Settings;
+export default CreateAccount;
