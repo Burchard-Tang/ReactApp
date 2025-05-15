@@ -2,13 +2,13 @@ a:hover {
     color: blue;
 }
 
-a{
+a {
     color: black;
 }
 
-.headerNav{
-    margin:5px 35px;
-    padding:10px 7px 7px 7px;
+.headerNav {
+    margin: 5px 35px;
+    padding: 10px 7px 7px 7px;
     list-style-type: none;
     flex-direction: row;
     background: white;
@@ -25,10 +25,10 @@ a{
     float: right;
 }
 
-.headerStats{
+.headerStats {
     display: inline-block;
-    margin:5px 35px;
-    padding:10px 7px 7px 7px;
+    margin: 5px 35px;
+    padding: 10px 7px 7px 7px;
     list-style-type: none;
     flex-direction: row;
     color: white;
@@ -40,20 +40,20 @@ a{
     text-align: center;
 }
 
-.topBarDisp{
+.topBarDisp {
     display: inline-block;
 }
 
-.pageTitle{
+.pageTitle {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.pageText{
+.pageText {
     padding: 30px 160px;
 }
 
-.alignedText{
+.alignedText {
     display: inline-block;
     justify-content: center;
     display: flex;
@@ -61,15 +61,15 @@ a{
     text-align: center;
 }
 
-.alignImages{
-  list-style-type: none;
-  padding: 0px;
-  display: flex;
-  justify-content: center;
-  gap: 150px; 
+.alignImages {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
 }
 
-.lootImages{
+.lootImages {
     width: 300px;
     height: 300px;
     border-style: solid;
@@ -77,6 +77,11 @@ a{
     border-color: black;
 }
 
-
-
-
+:root {
+    /* CSS HEX */
+    --baby-powder: #fffcf9ff;
+    --jet: #3a3335ff;
+    --raspberry: #d81e5bff;
+    --cadet-gray: #799496ff;
+    --slate-gray: #7286a0ff;
+}
