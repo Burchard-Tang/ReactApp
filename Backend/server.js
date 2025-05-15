@@ -4,6 +4,7 @@ const cors = require('cors')
 
 const app = express()
 app.use(cors())
+app.use(express.json());
 
 const db = mysql.createConnection({
     host: "localhost",
@@ -13,17 +14,26 @@ const db = mysql.createConnection({
 })
 
 app.get('/', (re, res)=> {
-    return res.json("lol fucker");
+    return res.json("ho");
 })
 
-app.get('/users', (req,res) =>{
-    const sql = "SELECT * FROM users"
-    db.query(sql, (err, data)=> {
-        if (err) return res.json(err);
-        return res.json(data);
+app.post('/users', (req, res) => {
+    const sql = 'SELECT * FROM users WHERE name = ? AND password = ?';
+    db.query(sql, [req.body.name, req.body.password], (err, rows) => {
+        if (err) return res.status(500).json({ error: err.message });
+        if (rows.length > 0) return res.json("Real User");
+        return res.status(401).json("Invalid credentials");
+    });
+});
+
+app.put('/create', (req, res) => {
+    const sql = 'INSERT INTO users (id, name, password, points) VALUES (0, ?, ?, 0)';
+    db.query(sql, [req.body.name, req.body.password], (err, result) => {
+        if (err) return res.json("welp");
+        return res.json("added");
     })
-})
+});
 
-app.listen(8008, ()=>{
+app.listen(8081, () => {
     console.log("listening");
-})
+});
