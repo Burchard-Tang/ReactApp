@@ -1,6 +1,15 @@
+import React, {useState} from 'react';
+
 import commonGambleImg from '../images/commonLootBox.jpg';
 import rareGambleImg from '../images/superLootBox.jpg';
 import superGambleImg from '../images/Golden_Loot_Box.webp';
+
+/*should later be made into a publicly accessed image array throughout the program*/
+import reward1 from '../images/reward1.png';
+import reward2 from '../images/reward2.png';
+import reward3 from '../images/reward3.png';
+
+
 
 const Gambling = () =>
 (
@@ -26,7 +35,9 @@ const Gambling = () =>
             </li>
 
         </ul>
+
     </>
+    
 )
 
 export default Gambling;

@@ -69,6 +69,14 @@ a{
   gap: 150px; 
 }
 
+.alignImages2{
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
 .lootImages{
     width: 300px;
     height: 300px;
